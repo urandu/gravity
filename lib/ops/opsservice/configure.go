@@ -1030,8 +1030,9 @@ func (s *site) getPlanetConfig(config planetConfig) (args []string, err error) {
 		args = append(args, fmt.Sprintf("--%v=%v", k, v))
 	}
 
-	// FIXME: flag to control SELinux support
-	args = append(args, "--selinux")
+	if config.installExpand.InstallExpand.SELinux {
+		args = append(args, "--selinux")
+	}
 
 	log.WithField("args", args).Info("Runtime configuration.")
 	return args, nil

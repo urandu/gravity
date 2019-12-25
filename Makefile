@@ -42,7 +42,7 @@ RELEASE_OUT ?=
 TELEPORT_TAG = 3.2.13
 # TELEPORT_REPOTAG adapts TELEPORT_TAG to the teleport tagging scheme
 TELEPORT_REPOTAG := v$(TELEPORT_TAG)
-PLANET_TAG := 6.1.11-$(K8S_VER_SUFFIX)
+PLANET_TAG := 6.1.11-$(K8S_VER_SUFFIX)-17-gbf782cf
 PLANET_BRANCH := $(PLANET_TAG)
 K8S_APP_TAG := $(GRAVITY_TAG)
 TELEKUBE_APP_TAG := $(GRAVITY_TAG)
@@ -142,7 +142,7 @@ TILLER_APP_OUT := $(GRAVITY_BUILDDIR)/tiller-app.tar.gz
 TELEKUBE_OUT := $(GRAVITY_BUILDDIR)/telekube.tar
 TF_PROVIDER_GRAVITY_OUT := $(GRAVITY_BUILDDIR)/terraform-provider-gravity
 TF_PROVIDER_GRAVITYENTERPRISE_OUT := $(GRAVITY_BUILDDIR)/terraform-provider-gravityenterprise
-SELINUX_ASSETSDIR := $(TOP)/lib/system/selinux/assets/
+SELINUX_ASSETSDIR := $(TOP)/lib/system/selinux/assets/centos
 SELINUX_ASSETS := $(SELINUX_ASSETSDIR)/gravity.pp.bz2 \
 		$(SELINUX_ASSETSDIR)/container.pp.bz2
 SELINUX_OUT := $(GRAVITY_BUILDDIR)/selinux-policy.tgz
